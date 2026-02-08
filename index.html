@@ -256,39 +256,6 @@ No matter what happens, I’ll always value you 💞
   </div>
 </div>
 
+<!-- MUSIC -->
 <audio id="bgMusic" loop>
-<source src="music.mp3" type="audio/mp3">
-</audio>
-
-<script>
-// Typewriter
-const text="Dear Nandini...";
-let i=0;
-function typing(){
-    if(i<text.length){
-        document.getElementById("typeText").innerHTML+=text.charAt(i);
-        i++;
-        setTimeout(typing,100);
-    }
-}
-typing();
-
-// Autoplay Music (may require interaction)
-window.onload = function(){
-    const music = document.getElementById("bgMusic");
-    music.play().catch(()=>{});
-}
-
-// Show Popup
-function showPromise(){
-    document.getElementById("promisePopup").style.display="flex";
-    document.getElementById("bgMusic").play();
-}
-
-function closePromise(){
-    document.getElementById("promisePopup").style.display="none";
-}
-</script>
-
-</body>
-</html>
+<source sr
