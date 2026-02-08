@@ -3,12 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Promise Day ❤️</title>
+<title>Happy Promise Day Nandini ❤️</title>
 
 <style>
-/* ===============================
-   BASIC PAGE STYLE
-=================================*/
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -26,9 +23,6 @@ body {
     100% {background-position: 0% 50%;}
 }
 
-/* ===============================
-   FLOATING HEARTS
-=================================*/
 .heart {
     position: fixed;
     bottom: -20px;
@@ -42,9 +36,6 @@ body {
     100% {transform: translateY(-110vh) scale(1.5);}
 }
 
-/* ===============================
-   CONTENT
-=================================*/
 .container {
     padding: 30px 15px;
 }
@@ -60,9 +51,7 @@ h1 {
     to { text-shadow: 0 0 30px #ff4b5c; }
 }
 
-/* ===============================
-   TEDDY DANCE ANIMATION
-=================================*/
+/* Teddy */
 .teddy {
     width: 150px;
     margin: 20px 0;
@@ -74,19 +63,14 @@ h1 {
     100% { transform: rotate(10deg) scale(1.1); }
 }
 
-/* ===============================
-   MESSAGE SECTION
-=================================*/
 .message {
-    max-width: 600px;
+    max-width: 650px;
     margin: auto;
     font-size: 18px;
     line-height: 1.6;
 }
 
-/* ===============================
-   GALLERY (3D FLIP CARDS)
-=================================*/
+/* Gallery */
 .gallery {
     display: flex;
     justify-content: center;
@@ -134,12 +118,9 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
 }
 
-/* ===============================
-   BUTTONS
-=================================*/
+/* Buttons */
 button {
     padding: 10px 20px;
     margin: 10px;
@@ -157,9 +138,6 @@ button:hover {
     color: white;
 }
 
-/* ===============================
-   HIDDEN PROMISE MESSAGE
-=================================*/
 .promise {
     display: none;
     margin-top: 20px;
@@ -172,7 +150,6 @@ button:hover {
     to {opacity: 1; transform: translateY(0);}
 }
 
-/* Responsive */
 @media(max-width:768px){
     h1 {font-size: 2em;}
     .gallery {flex-direction: column; align-items: center;}
@@ -182,109 +159,4 @@ button:hover {
 
 <body>
 
-<div class="container">
-
-    <!-- HEADING -->
-    <h1>Happy Promise Day ❤️</h1>
-
-    <!-- TEDDY IMAGE (You can change this image link if you want) -->
-    <img src="https://i.imgur.com/6Xg8Z8D.png" class="teddy">
-
-    <!-- MESSAGE (You can edit this message here ❤️) -->
-    <div class="message">
-        <p>
-        On this special Promise Day, I just want to promise that I’ll always 
-        respect you, support you, and stand beside you no matter what.  
-        You are not just my best friend, you are someone truly special in my life. 💖
-        </p>
-    </div>
-
-    <!-- PHOTO GALLERY (Replace images below with your photos) -->
-    <div class="gallery">
-
-        <!-- PHOTO 1 -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="photo1.jpg" alt="Photo 1">
-                </div>
-                <div class="card-back">Beautiful Memories 💕</div>
-            </div>
-        </div>
-
-        <!-- PHOTO 2 -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="photo2.jpg" alt="Photo 2">
-                </div>
-                <div class="card-back">Forever Smiles 😊</div>
-            </div>
-        </div>
-
-        <!-- PHOTO 3 -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="photo3.jpg" alt="Photo 3">
-                </div>
-                <div class="card-back">Special Moments ✨</div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- MUSIC BUTTON -->
-    <button onclick="playMusic()">Play Music 🎵</button>
-
-    <!-- PROMISE BUTTON -->
-    <button onclick="showPromise()">Click to See My Promise 💌</button>
-
-    <!-- HIDDEN PROMISE MESSAGE (Edit here ❤️) -->
-    <div class="promise" id="promiseText">
-        I Promise to always care for you, respect you, and keep making you smile no matter what. 💞
-    </div>
-
-</div>
-
-<!-- BACKGROUND MUSIC (Replace music.mp3 with your song file) -->
-<audio id="bgMusic" loop>
-    <source src="music.mp3" type="audio/mp3">
-</audio>
-
-<script>
-/* ===============================
-   MUSIC FUNCTION
-=================================*/
-function playMusic() {
-    document.getElementById("bgMusic").play();
-}
-
-/* ===============================
-   SHOW PROMISE MESSAGE
-=================================*/
-function showPromise() {
-    document.getElementById("promiseText").style.display = "block";
-}
-
-/* ===============================
-   FLOATING HEARTS GENERATOR
-=================================*/
-function createHeart() {
-    const heart = document.createElement("div");
-    heart.classList.add("heart");
-    heart.innerHTML = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = (Math.random() * 5 + 5) + "s";
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-        heart.remove();
-    }, 8000);
-}
-
-setInterval(createHeart, 500);
-</script>
-
-</body>
-</html>
+<div class="containe
