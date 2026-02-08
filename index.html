@@ -26,7 +26,7 @@ body::before{
     z-index:-1;
 }
 
-/* Glowing 3D Name */
+/* Glowing Name */
 .name3d{
     font-size:55px;
     margin-top:40px;
@@ -45,11 +45,11 @@ body::before{
     to{transform:scale(1.05);}
 }
 
-/* Friendship Message */
+/* Message */
 .friend-msg{
     font-size:20px;
     max-width:700px;
-    margin:10px auto 20px;
+    margin:15px auto;
     line-height:1.6;
 }
 
@@ -122,10 +122,10 @@ body::before{
     font-size:16px;
 }
 
-/* Buttons */
+/* Button */
 button{
     padding:12px 25px;
-    margin:10px;
+    margin:20px;
     border:none;
     border-radius:25px;
     font-size:16px;
@@ -140,7 +140,7 @@ button:hover{
     color:white;
 }
 
-/* POPUP */
+/* Popup */
 .popup{
     display:none;
     position:fixed;
@@ -194,14 +194,14 @@ button:hover{
 <div class="name3d">NANDINI ❤️</div>
 
 <div class="friend-msg">
-Some friendships are not just connections,
-they are blessings in disguise.
-And you are one of the most beautiful blessings in my life. ✨💖
+Some friendships are rare gems,
+and you are the most precious one in my life.
+Your smile, your kindness, your presence —
+they mean more than you know. ✨💖
 </div>
 
 <div class="typewriter" id="typeText"></div>
 
-<!-- GALLERY -->
 <div class="gallery">
 
 <div class="card">
@@ -210,7 +210,7 @@ And you are one of the most beautiful blessings in my life. ✨💖
 <img src="photo1.jpeg">
 </div>
 <div class="card-back">
-Your smile makes my world brighter 💕
+Your smile brightens my darkest days 💕
 </div>
 </div>
 </div>
@@ -221,7 +221,7 @@ Your smile makes my world brighter 💕
 <img src="photo2.jpeg">
 </div>
 <div class="card-back">
-You are the most beautiful part of my memories ✨
+Every memory with you feels magical ✨
 </div>
 </div>
 </div>
@@ -232,7 +232,7 @@ You are the most beautiful part of my memories ✨
 <img src="photo3.jpeg">
 </div>
 <div class="card-back">
-No matter what happens, I’ll always value you 💞
+I’ll always cherish our bond 💞
 </div>
 </div>
 </div>
@@ -241,13 +241,12 @@ No matter what happens, I’ll always value you 💞
 
 <button onclick="showPromise()">Click My Promise 💌</button>
 
-<!-- POPUP -->
 <div class="popup" id="promisePopup">
   <div class="popup-box">
     <span class="close-btn" onclick="closePromise()">❌</span>
     <h2>My Promise To You 💖</h2>
     <p>
-      Nandini, I promise that I will always respect you,
+      Nandini, I promise to always respect you,
       care for you sincerely, support your dreams,
       and stand beside you whenever you need someone.
       No matter where life takes us,
@@ -256,6 +255,43 @@ No matter what happens, I’ll always value you 💞
   </div>
 </div>
 
-<!-- MUSIC -->
 <audio id="bgMusic" loop>
-<source sr
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+<script>
+
+// Typewriter
+document.addEventListener("DOMContentLoaded", function() {
+    const text = "Dear Nandini...";
+    let i = 0;
+
+    function typing(){
+        if(i < text.length){
+            document.getElementById("typeText").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, 100);
+        }
+    }
+    typing();
+});
+
+// GLOBAL function (Fix for error)
+function showPromise(){
+    const popup = document.getElementById("promisePopup");
+    const music = document.getElementById("bgMusic");
+
+    popup.style.display = "flex";
+
+    music.currentTime = 0;
+    music.play().catch(()=>{});
+}
+
+function closePromise(){
+    document.getElementById("promisePopup").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
